@@ -1,0 +1,10 @@
+.DS_Store
+bin
+target
+.classpath
+.project
+.settings
+srcmainwebappMETA-INF
+.idea
+.iml
+out

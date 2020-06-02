@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th lang="en">
+<head th:replace="/layout :: head">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id = "form">
+    <form th:action="@{/customer/delete}" method="post" th:object="${customer}">
+        <input type="hidden" th:field="${customer.id}">
+         <table>
+             <tr>
+                 <td>ID</td>
+                 <td><span th:text="${customer.id}"></span></td>
+             </tr>
+             <tr>
+                 <td>Name</td>
+                 <td><span th:text="${customer.name}"></span></td>
+             </tr>
+             <tr>
+                 <td>Email</td>
+                 <td><span th:text="${customer.email}"></span></td>
+             </tr>
+             <tr>
+                 <td>Address</td>
+                 <td><span th:text="${customer.address}"></span></td>
+             </tr>
+             <tr>
+                 <td><input type="submit" value="Delete"></td>
+             </tr>
+         </table>
+    </form>
+</div>
+</body>
+<footer th:replace="/layout::footer"></footer>
+</html>
